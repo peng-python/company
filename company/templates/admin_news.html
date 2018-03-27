@@ -5,22 +5,7 @@
         </div>
     <div class="search-wrap">
             <div class="search-content">
-{#                <form action="#" method="post">#}
-{#                    <table class="search-tab">#}
-{#                        <tr>#}
-{#                            <th width="120">选择分类:</th>#}
-{#                            <td>#}
-{#                                <select name="search-sort" id="">#}
-{#                                    <option value="">全部</option>#}
-{#                                    <option value="19">精品界面</option><option value="20">推荐界面</option>#}
-{#                                </select>#}
-{#                            </td>#}
-{#                            <th width="70">关键字:</th>#}
-{#                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>#}
-{#                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>#}
-{#                        </tr>#}
-{#                    </table>#}
-{#                </form>#}
+
             </div>
         </div>
     <div class="result-wrap">
@@ -48,11 +33,6 @@
                         </tr>
                         {% for news in news_all %}
                         <tr>
-{#                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>#}
-{#                            <td>#}
-{#                                <input name="ids[]" value="59" type="hidden">#}
-{#                                <input class="common-input sort-input" name="ord[]" value="0" type="text">#}
-{#                            </td>#}
                             <td>{{ news.id }}</td>
                             <td title="发哥经典"><a target="_blank" href="#" title="发哥经典">{{ news.title }}</a> …
                             </td>
@@ -62,30 +42,11 @@
                             <td>{{ news.add_time }}</td>
                             <td></td>
                             <td>
-{#                                <a class="link-update" href="#">修改</a>#}
                                 <a class="link-del" href="/admin/news/delete/{{ news.id }}">删除</a>
                             </td>
                         </tr>
                         {% endfor %}
-{#                        <tr>#}
-{#                            <td class="tc"><input name="id[]" value="58" type="checkbox"></td>#}
-{#                            <td>#}
-{#                                <input name="ids[]" value="58" type="hidden">#}
-{#                                <input class="common-input sort-input" name="ord[]" value="0" type="text">#}
-{#                            </td>#}
-{#                            <td>58</td>#}
-{#                            <td title="黑色经典"><a target="_blank" href="#" title="黑色经典">黑色经典</a> …#}
-{#                            </td>#}
-{#                            <td>0</td>#}
-{#                            <td>35</td>#}
-{#                            <td>admin</td>#}
-{#                            <td>2013-12-30 22:34:00</td>#}
-{#                            <td></td>#}
-{#                            <td>#}
-{#                                <a class="link-update" href="#">修改</a>#}
-{#                                <a class="link-del" href="#">删除</a>#}
-{#                            </td>#}
-{#                        </tr>#}
+
                     </table>
                     <div class="list-page">
                     <ul>
@@ -98,10 +59,6 @@
                             <a href="{% if pagination.has_next %}{{ url_for('admin_news',page=pagination.page+1) }}{% else %}#{% endif %}">>></a>
 
                     </ul>
-
-{##}
-{#                        2 条 1/1 页#}
-
 
                     </div>
                 </div>

@@ -13,25 +13,24 @@
                 </div>
             </div>
             <div class="new_m">
-            	<div class="box mainPhoto"> <span class="goleft nextPage"><a href="javascript:void(0)"><img src="/static/images/prev.png"/></a></span>
+            	<div class="box mainPhoto">
                   <div class="go slidegrid">
                     <ul class="slideitems">
                       <li>
-                      	<div class="tu"><a href="news_d.html"><img src="data:;base64,{{ base64.b64encode(head_news.image) }}" alt=""/></a></div>
+                      	<div class="tu"><a href="/news/detail/{{ head_news.id }}"><img src="data:;base64,{{ base64.b64encode(head_news.image) }}" alt=""/></a></div>
                           <div class="n_m">
                             <div class="title">
-                                <span>2015-1-11</span>
-                                <p class="name"><a href="news_d.html">{{ head_news.title }}</a></p>
+                                <span>{{ head_news.add_time }}</span>
+                                <p class="name"><a href="/news/detail/{{ head_news.id }}">{{ head_news.title }}</a></p>
                             </div>
                             <div class="des">
-{#                                头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安店开始...#}
                                 {{ head_news.content | truncate(25,True) }}
                             </div>
                         </div>
                       </li>
                     </ul>
                   </div>
-                  <span class="goright prevPage"><a href="javascript:void(0)"><img src="Assets/images/next.png" /></a></span> </div>
+                </div>
                 <script>
                 $(function(){
                 $('.mainPhoto .slidegrid').scrollable({size:1,circular:true,next:'.nextPage',prev:'.prevPage'}).autoscroll();
@@ -39,11 +38,10 @@
                 </script> 
             	<div class="n_m">
                     <div class="title">
-                        <span>2015-1-11</span>
-                        <p class="name"><a href="news_d.html">{{ head_news.title }}</a></p>
+                        <span>{{ head_news.add_time }}</span>
+                        <p class="name"><a href="/news/detail/{{ head_news.id }}">{{ head_news.title }}</a></p>
                     </div>
                     <div class="des">
-{#                        头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...#}
                     {{ head_news.content | truncate(25,True) }}
                     </div>
                 </div>
@@ -58,43 +56,16 @@
                 <div class="n_m">
 
                     <div class="title">
-                        <span>2015-1-11</span>
+                        <span>{{ news.add_time }}</span>
                         <p class="name"><a href="/news/detail/{{ news.id }}">{{ news.title }}</a></p>
                     </div>
                     <div class="des">
-    {#                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...#}
                     {{ news.content | truncate(25,True) }}
                     </div>
 
                 </div>
                 {% endfor %}
-{#            <div class="n_m">#}
-{#                <div class="title">#}
-{#                    <span>2015-1-11</span>#}
-{#                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>#}
-{#                </div>#}
-{#                <div class="des">#}
-{#                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="n_m">#}
-{#                <div class="title">#}
-{#                    <span>2015-1-11</span>#}
-{#                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>#}
-{#                </div>#}
-{#                <div class="des">#}
-{#                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="n_m">#}
-{#                <div class="title">#}
-{#                    <span>2015-1-11</span>#}
-{#                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>#}
-{#                </div>#}
-{#                <div class="des">#}
-{#                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...#}
-{#                </div>#}
-{#           </div>#}
+
         </div>
         </div>
     </div>

@@ -102,7 +102,7 @@ def admin_news():
         page=request.args.get('page',1,type=int)
 
         news_all=NewsModel.query.order_by('-id')
-        pagination=news_all.paginate(page,per_page=1,error_out=False)
+        pagination=news_all.paginate(page,per_page=2,error_out=False)
         news=pagination.items
         context={'news_all':news,'pagination':pagination}
         return render_template('admin_news.html',**context)
