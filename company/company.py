@@ -186,7 +186,11 @@ def news():
 @app.route('/news/detail/<id>/')
 def news_detail(id):
     detail=NewsModel.query.filter(NewsModel.id == id).first()
-    context={'detail':detail,'base64':base64}
+    detail.click=detail.click+1
+    db.session.add(detail)
+    db.session.commit()
+    a=2
+    context={'detail':detail,'base64':base64,'a':a}
     return render_template('news_detail.html',**context)
 
 

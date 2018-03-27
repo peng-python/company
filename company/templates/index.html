@@ -167,7 +167,7 @@
         	<li>
             	<a href="/news/detail/{{ n.id }}">
                 	<p>{{ n.title | truncate(10,True) }}<a href="http://www.mycodes.net/" target="_blank"></a></p>
-                    <em>2015-10-25</em>
+                    <em>{{ n.add_time }}</em>
                 </a>
             </li>
             {% endfor %}

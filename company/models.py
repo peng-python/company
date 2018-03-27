@@ -1,4 +1,5 @@
 from exts import db
+from datetime import datetime
 
 
 
@@ -15,6 +16,8 @@ class NewsModel(db.Model):
     # image_name=db.Column(db.String(200))
     image=db.Column(db.LargeBinary(length=204800))
     content=db.Column(db.String(1000),nullable=False)
+    add_time=db.Column(db.Date,default=datetime.now)
+    click=db.Column(db.Integer,nullable=False,default=0)
 
 class AdvertisementModel(db.Model):
     __tablename__='advertisement'
